@@ -8,10 +8,12 @@ import java.security.cert.PKIXRevocationChecker.Option;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
+import menjacnica.gui.*;
 import menjacnica.gui.MenjacnicaGUI;
 
 public class GUIKontroler {
 	private static MenjacnicaGUI menjacnicaGUI;
+	private static DodajKursGUI dodajKursGUI;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -25,6 +27,19 @@ public class GUIKontroler {
 				}
 			}
 		});
+	}
+	public static void otvoriProzorZaDodavanjeKursa(){
+		dodajKursGUI = new DodajKursGUI();
+		dodajKursGUI.setVisible(true);
+		dodajKursGUI.setLocationRelativeTo(menjacnicaGUI);
+		
+		}
+	public static void dodaj(){
+		String s =dodajKursGUI.dodavanje();
+		dodajKursGUI.dispose();
+		menjacnicaGUI.ispisi(s);
+		
+		
 	}
 	public static String izaberiFajl(){
 		 		String fajl = "";
@@ -69,5 +84,7 @@ public class GUIKontroler {
 		String poruka = "Ime i prezime autora: anadzudovic, grad: Beograd, zemlja:Srbija";
 		JOptionPane.showMessageDialog(menjacnicaGUI.getContentPane(), poruka, "Podaci o autoru",2);
 	}
+	
+	
 
 }
