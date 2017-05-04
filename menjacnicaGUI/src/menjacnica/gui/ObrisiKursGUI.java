@@ -33,25 +33,7 @@ public class ObrisiKursGUI extends JFrame {
 	private JTextField textskr;
 	private JCheckBox cb;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ObrisiKursGUI frame = new ObrisiKursGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public ObrisiKursGUI() {
 		setResizable(false);
 		setTitle("Obrisi kurs");

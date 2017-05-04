@@ -15,6 +15,7 @@ public class GUIKontroler {
 	private static MenjacnicaGUI menjacnicaGUI;
 	private static DodajKursGUI dodajKursGUI;
 	private static ObrisiKursGUI obrisiKursGUI;
+	private static IzvrsiZamenuGUI izvrsiZamenuGUI;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -41,6 +42,12 @@ public class GUIKontroler {
 		obrisiKursGUI.setLocationRelativeTo(menjacnicaGUI);
 		
 		}
+	public static void otvoriProzorZaZamenu(){
+		izvrsiZamenuGUI = new IzvrsiZamenuGUI();
+		izvrsiZamenuGUI.setVisible(true);
+		izvrsiZamenuGUI.setLocationRelativeTo(menjacnicaGUI);
+		
+		}
 	public static void spojiIIspisi(){
 		String s =dodajKursGUI.spajanje();
 		dodajKursGUI.dispose();
@@ -54,6 +61,9 @@ public class GUIKontroler {
 		menjacnicaGUI.ispisi(s);
 		
 		
+	}
+	public static void samoIspis(String p){
+		menjacnicaGUI.ispisi(p);
 	}
 	public static String izaberiFajl(){
 		 		String fajl = "";
