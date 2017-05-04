@@ -14,6 +14,7 @@ import menjacnica.gui.MenjacnicaGUI;
 public class GUIKontroler {
 	private static MenjacnicaGUI menjacnicaGUI;
 	private static DodajKursGUI dodajKursGUI;
+	private static ObrisiKursGUI obrisiKursGUI;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -34,9 +35,22 @@ public class GUIKontroler {
 		dodajKursGUI.setLocationRelativeTo(menjacnicaGUI);
 		
 		}
-	public static void dodaj(){
-		String s =dodajKursGUI.dodavanje();
+	public static void otvoriProzorZaBrisanjeKursa(){
+		obrisiKursGUI = new ObrisiKursGUI();
+		obrisiKursGUI.setVisible(true);
+		obrisiKursGUI.setLocationRelativeTo(menjacnicaGUI);
+		
+		}
+	public static void spojiIIspisi(){
+		String s =dodajKursGUI.spajanje();
 		dodajKursGUI.dispose();
+		menjacnicaGUI.ispisi(s);
+		
+		
+	}
+	public static void spojiIIspisi2(){
+		String s =obrisiKursGUI.spajanje();
+		obrisiKursGUI.dispose();
 		menjacnicaGUI.ispisi(s);
 		
 		

@@ -157,7 +157,7 @@ public class DodajKursGUI extends JFrame {
 			btnDodaj = new JButton("Dodaj");
 			btnDodaj.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					GUIKontroler.dodaj();
+					GUIKontroler.spojiIIspisi();
 				}
 			});
 			btnDodaj.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
@@ -179,7 +179,7 @@ public class DodajKursGUI extends JFrame {
 		}
 		return btnOdustani;
 	}
-	public String  dodavanje(){
+	public String  spajanje(){
 		String s ="";
 		String naziv = nazivtxt.getText();
 		String sifra = sifratxt.getText();
