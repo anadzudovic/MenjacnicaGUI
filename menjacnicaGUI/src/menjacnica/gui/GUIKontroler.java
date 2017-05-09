@@ -66,7 +66,7 @@ public class GUIKontroler {
 		menjacnicaGUI.ispisi(p);
 	}
 	public static String izaberiFajl(){
-		 		String fajl = "";
+		 		String fajl = null;
 		 		try {
 		 			JFileChooser fc = new JFileChooser();
 		 			int odgovor = fc.showOpenDialog(menjacnicaGUI);
@@ -83,7 +83,7 @@ public class GUIKontroler {
 		 		
 		 	}
 	public static String sacuvajFajl(){
- 		String fajl = "";
+ 		String fajl = null;
  		try {
  			JFileChooser fc = new JFileChooser();
  			int odgovor = fc.showSaveDialog(menjacnicaGUI);

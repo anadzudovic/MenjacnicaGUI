@@ -20,7 +20,7 @@ import java.awt.Dimension;
 import javax.swing.JTextArea;
 import javax.swing.border.TitledBorder;
 
-import modelTabele.TableModel;
+
 
 import javax.swing.UIManager;
 import java.awt.Toolkit;
@@ -42,6 +42,7 @@ import java.io.File;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class MenjacnicaGUI extends JFrame {
 
@@ -138,10 +139,10 @@ public class MenjacnicaGUI extends JFrame {
 		if (pane == null) {
 			pane = new JScrollPane();
 			pane.setAutoscrolls(true);
-			pane.setPreferredSize(new Dimension(25, 50));
+			pane.setPreferredSize(new Dimension(25, 55));
 			pane.setBorder(new TitledBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)), "STATUS:", TitledBorder.LEFT, TitledBorder.TOP, null, new Color(0, 0, 0)));
-			pane.setLayout(null);
-			pane.add(getTextArea());
+			pane.setViewportView(getTextArea());
+			
 			
 		}
 		return pane;
@@ -187,8 +188,8 @@ public class MenjacnicaGUI extends JFrame {
 	private JTextArea getTextArea() {
 		if (textArea == null) {
 			textArea = new JTextArea();
-			textArea.setBounds(10, 16, 458, 23);
-			textArea.setPreferredSize(new Dimension(52, 20));
+			
+			
 		}
 		return textArea;
 	}
