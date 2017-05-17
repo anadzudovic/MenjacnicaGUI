@@ -68,7 +68,8 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem mntmIzvrsiZamenu;
 	private JMenuBar menuBar_1;
      public MenjacnicaGUI() {
-		//setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/icons/exchange.png")));
+     	setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/ikonice/exchange.png")));
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/exit-icon-png-13.png")));
 		setVisible(true);
 		setForeground(Color.BLACK);
 		setBackground(Color.WHITE);
@@ -216,6 +217,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenu getMnNewMenu() {
 		if (mnNewMenu == null) {
 			mnNewMenu = new JMenu("File");
+			mnNewMenu.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/office-material.png")));
 			//mnNewMenu.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/office-material.png")));
 			mnNewMenu.add(getMntmOpen());
 			mnNewMenu.add(getMntmSave());
@@ -226,6 +228,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmOpen() {
 		if (mntmOpen == null) {
 			mntmOpen = new JMenuItem("Open");
+			mntmOpen.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/safebox.png")));
 			mntmOpen.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					String putanja = GUIKontroler.izaberiFajl();
@@ -242,6 +245,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmSave() {
 		if (mntmSave == null) {
 			mntmSave = new JMenuItem("Save");
+			mntmSave.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/diskette.png")));
 			mntmSave.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					String putanja = GUIKontroler.sacuvajFajl();
@@ -258,6 +262,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmExit() {
 		if (mntmExit == null) {
 			mntmExit = new JMenuItem("Exit");
+			mntmExit.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/door.png")));
 			mntmExit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.ugasiAplikaciju();
@@ -271,6 +276,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenu getMnHelp() {
 		if (mnHelp == null) {
 			mnHelp = new JMenu("Help");
+			mnHelp.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/lifesaver.png")));
 			//mnHelp.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/lifesaver.png")));
 			mnHelp.add(getMntmAbout());
 		}
@@ -279,6 +285,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmAbout() {
 		if (mntmAbout == null) {
 			mntmAbout = new JMenuItem("About");
+			mntmAbout.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/ikonice/question.png")));
 			mntmAbout.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					GUIKontroler.prikazPodatakaOAutoru();
