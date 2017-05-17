@@ -68,7 +68,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem mntmIzvrsiZamenu;
 	private JMenuBar menuBar_1;
      public MenjacnicaGUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/icons/exchange.png")));
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(MenjacnicaGUI.class.getResource("/icons/exchange.png")));
 		setVisible(true);
 		setForeground(Color.BLACK);
 		setBackground(Color.WHITE);
@@ -216,7 +216,7 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenu getMnNewMenu() {
 		if (mnNewMenu == null) {
 			mnNewMenu = new JMenu("File");
-			mnNewMenu.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/office-material.png")));
+			//mnNewMenu.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/office-material.png")));
 			mnNewMenu.add(getMntmOpen());
 			mnNewMenu.add(getMntmSave());
 			mnNewMenu.add(getMntmExit());
@@ -235,7 +235,7 @@ public class MenjacnicaGUI extends JFrame {
 				}
 			});
 			mntmOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
-			mntmOpen.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/safebox.png")));
+			//mntmOpen.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/safebox.png")));
 		}
 		return mntmOpen;
 	}
@@ -251,7 +251,7 @@ public class MenjacnicaGUI extends JFrame {
 			
 			
 			mntmSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
-			mntmSave.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/diskette.png")));
+			//mntmSave.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/diskette.png")));
 		}
 		return mntmSave;
 	}
@@ -264,14 +264,14 @@ public class MenjacnicaGUI extends JFrame {
 				}
 			});
 			mntmExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_MASK));
-			mntmExit.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/door.png")));
+			//mntmExit.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/door.png")));
 		}
 		return mntmExit;
 	}
 	private JMenu getMnHelp() {
 		if (mnHelp == null) {
 			mnHelp = new JMenu("Help");
-			mnHelp.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/lifesaver.png")));
+			//mnHelp.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/lifesaver.png")));
 			mnHelp.add(getMntmAbout());
 		}
 		return mnHelp;
@@ -284,7 +284,7 @@ public class MenjacnicaGUI extends JFrame {
 					GUIKontroler.prikazPodatakaOAutoru();
 				}
 			});
-			mntmAbout.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/question.png")));
+			//mntmAbout.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/question.png")));
 		}
 		return mntmAbout;
 	}

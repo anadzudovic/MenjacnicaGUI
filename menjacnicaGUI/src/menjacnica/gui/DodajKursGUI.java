@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -184,9 +186,25 @@ public class DodajKursGUI extends JFrame {
 		String naziv = nazivtxt.getText();
 		String sifra = sifratxt.getText();
 		String skraceniNaziv = skrtxt.getText();
-		double prodajniKurs= Double.parseDouble(prtxt.getText());
-		double srednjiKurs= Double.parseDouble(srtxt.getText());
-		double kupovniKurs = Double.parseDouble(kuptxt.getText());
+		double prodajniKurs = 0;
+		try {
+			prodajniKurs = Double.parseDouble(prtxt.getText());
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Morate uneti broj za prodajni kurs", "Greska",JOptionPane.ERROR_MESSAGE);
+		}
+		double srednjiKurs = 0;
+		try {
+			srednjiKurs = Double.parseDouble(srtxt.getText());
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Morate uneti broj za srednji kurs", "Greska",JOptionPane.ERROR_MESSAGE);
+		 			
+		}
+		double kupovniKurs = 0;
+		try {
+			kupovniKurs = Double.parseDouble(kuptxt.getText());
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Morate uneti broj za kupovni kurs", "Greska",JOptionPane.ERROR_MESSAGE);
+		}
 		s= " Naziv " + naziv+ " Sifra "+sifra+" Skraceni naziv "+skraceniNaziv+" Prodajni kurs "+
 		prodajniKurs+ " Kupovni kurs "+ kupovniKurs+" Srednji kurs "+srednjiKurs;
 		return s;
