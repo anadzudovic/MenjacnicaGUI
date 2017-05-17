@@ -210,10 +210,11 @@ public class ObrisiKursGUI extends JFrame {
 		String naziv = textnaziv.getText();
 		String sifra = textsifra.getText();
 		String skraceniNaziv = textskr.getText();
+
 		String prodajniKurs= textpr.getText();
 		String srednjiKurs= textsr.getText();
 		String kupovniKurs =textkup.getText();
-		s= " Naziv " + naziv+ " Sifra "+sifra+" Skraceni naziv "+skraceniNaziv+" Prodajni kurs "+
+        s= " Naziv " + naziv+ " Sifra "+sifra+" Skraceni naziv "+skraceniNaziv+" Prodajni kurs "+
 		prodajniKurs+ " Kupovni kurs "+ kupovniKurs+" Srednji kurs "+srednjiKurs;
 		return s;
 	}
