@@ -49,27 +49,16 @@ public class GUIKontroler {
 		
 		}
 	public static void spojiIIspisi(){
-		
-		try {
-			String s = dodajKursGUI.spajanje();
-			dodajKursGUI.dispose();
-			menjacnicaGUI.ispisi(s);
-			
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Proverite dal ste dobro uneli dobre vrednosti(kupovni, prodajni, srednji kurs moraju biti brojevi)");
-		}
-		
+		String s =dodajKursGUI.spajanje();
+		dodajKursGUI.dispose();
+		menjacnicaGUI.ispisi(s);
 		
 		
 	}
 	public static void spojiIIspisi2(){
-		try {
-			String s =obrisiKursGUI.spajanje();
-			obrisiKursGUI.dispose();
-			menjacnicaGUI.ispisi(s);
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Proverite dal ste dobro uneli dobre vrednosti(kupovni, prodajni, srednji kurs moraju biti brojevi)");
-		}
+		String s =obrisiKursGUI.spajanje();
+		obrisiKursGUI.dispose();
+		menjacnicaGUI.ispisi(s);
 		
 		
 	}
